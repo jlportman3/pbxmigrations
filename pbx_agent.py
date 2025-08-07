@@ -28,6 +28,8 @@ MYSQL_DB = "asterisk"
 DATA_DIR = Path("data")
 OLD_SYSTEM_DATA_DIR = DATA_DIR / "old_system"
 NEW_SYSTEM_DATA_DIR = DATA_DIR / "new_system"
+SOUND_FILES_PATH = "/var/lib/asterisk/sounds"
+VOICEMAIL_PATH = "/var/spool/asterisk/voicemail"
 
 # --- Core Functions ---
 
@@ -48,9 +50,9 @@ def run_remote_command(host: str, command: str, is_old_server: bool = False):
         print(e.stderr)
         raise
 
-def fetch_etc_asterisk(host: str, local_dir: Path, is_old_server: bool = False):
-    """Fetches the /etc/asterisk directory from a remote server."""
-    print(f"Fetching /etc/asterisk from {host}...")
+def fetch_directory(host: str, remote_path: str, local_dir: Path, is_old_server: bool = False, exclude_pattern: str = ""):
+    """Fetches a directory from a remote server via rsync."""
+    print(f"Fetching {remote_path} from {host}...")
     local_dir.mkdir(parents=True, exist_ok=True)
     
     ssh_opts = SSH_COMMON_OPTS
@@ -61,18 +63,19 @@ def fetch_etc_asterisk(host: str, local_dir: Path, is_old_server: bool = False):
         "rsync",
         "-avz",
         "-e", f"ssh {' '.join(ssh_opts)}",
-        f"{SSH_USER}@{host}:/etc/asterisk/",
-        str(local_dir / "asterisk")
+        f"{SSH_USER}@{host}:{remote_path}/",
+        str(local_dir / Path(remote_path).name) # Use the last part of the remote_path as the local directory name
     ]
-    if host == NEW_SYSTEM_HOST:
-        rsync_command.insert(2, "--exclude=keys") # Insert after -avz
+    
+    if exclude_pattern:
+        rsync_command.insert(2, f"--exclude={exclude_pattern}") # Insert after -avz
     
     print(f"Running: {' '.join(rsync_command)}")
     try:
         subprocess.run(rsync_command, check=True)
         print("Fetch successful.")
     except subprocess.CalledProcessError as e:
-        print(f"Error fetching /etc/asterisk from {host}: {e}")
+        print(f"Error fetching {remote_path} from {host}: {e}")
         raise
 
 def fetch_mysql_dump(host: str, local_dir: Path, is_old_server: bool = False):
@@ -98,6 +101,57 @@ def fetch_mysql_dump(host: str, local_dir: Path, is_old_server: bool = False):
         print("MySQL dump successful.")
     except Exception as e:
         print(f"Error fetching MySQL dump from {host}: {e}")
+        raise
+
+def push_directory(host: str, local_path: Path, remote_path: str):
+    """Pushes a directory to a remote server via rsync."""
+    print(f"Pushing {local_path} to {host}:{remote_path}...")
+    
+    ssh_opts = SSH_COMMON_OPTS
+    # No is_old_server check here, as we are pushing to the new server
+        
+    rsync_command = [
+        "rsync",
+        "-avz",
+        "-e", f"ssh {' '.join(ssh_opts)}",
+        str(local_path) + "/", # Add trailing slash to copy contents
+        f"{SSH_USER}@{host}:{remote_path}/"
+    ]
+    
+    print(f"Running: {' '.join(rsync_command)}")
+    try:
+        subprocess.run(rsync_command, check=True)
+        print("Push successful.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error pushing {local_path} to {host}: {e}")
+        raise
+
+def push_mysql_dump(host: str, local_dump_path: Path):
+    """Pushes a MySQL dump to the remote server and imports it."""
+    print(f"Pushing MySQL dump {local_dump_path} to {host}...")
+    
+    mysql_user = MYSQL_USER_NEW
+    mysql_pass = MYSQL_PASS_NEW
+
+    # Command to import the dump on the remote server
+    # Note: Password is sent on the command line. This is a security risk on a shared system.
+    remote_import_command = f"mysql -u {mysql_user} -p'{mysql_pass}' {MYSQL_DB}"
+    
+    # Use ssh to pipe the local dump file to the remote mysql command
+    ssh_opts = SSH_COMMON_OPTS
+    full_command = ["ssh"] + ssh_opts + [f"{SSH_USER}@{host}", remote_import_command]
+    
+    print(f"Running: cat {local_dump_path} | {' '.join(full_command)}")
+    try:
+        with open(local_dump_path, 'rb') as f:
+            subprocess.run(full_command, stdin=f, check=True)
+        print("MySQL dump import successful.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error importing MySQL dump on {host}:")
+        print(e.stderr)
+        raise
+    except Exception as e:
+        print(f"Error pushing MySQL dump to {host}: {e}")
         raise
 
 # --- Main Execution ---
@@ -144,59 +198,133 @@ def _compare_sql_dumps(old_db: dict[str, str], new_db: dict[str, str]) -> Tuple[
     }
     return missing_keys, changed
 
+def generate_comparison_report(old_etc_dir: Path, new_etc_dir: Path, old_db_path: Path, new_db_path: Path) -> str:
+    report_content = []
+
+    # --- Compare /etc/asterisk directories ---
+    etc_report_lines = []
+    old_etc_dir = OLD_SYSTEM_DATA_DIR / "asterisk"
+    new_etc_dir = NEW_SYSTEM_DATA_DIR / "asterisk"
+    
+    missing_in_new_etc, missing_in_old_etc = _compare_dirs(old_etc_dir, new_etc_dir)
+
+    etc_diff_found = False
+    if missing_in_new_etc:
+        etc_diff_found = True
+        etc_report_lines.append(f"Files to be COPIED from OLD /etc/asterisk to NEW ({len(missing_in_new_etc)} files):")
+        if len(missing_in_new_etc) <= 5: # List if few, otherwise just count
+            for p in missing_in_new_etc:
+                etc_report_lines.append(f"    - {p}")
+        else:
+            etc_report_lines.append("    (Too many to list, showing count only)")
+    
+    if missing_in_old_etc:
+        etc_diff_found = True
+        etc_report_lines.append(f"Files present in NEW /etc/asterisk but NOT in OLD (review for removal from NEW) ({len(missing_in_old_etc)} files):")
+        if len(missing_in_old_etc) <= 5: # List if few, otherwise just count
+            for p in missing_in_old_etc:
+                etc_report_lines.append(f"    - {p}")
+        else:
+            etc_report_lines.append("    (Too many to list, showing count only)")
+    
+    if etc_diff_found:
+        report_content.append("--- /etc/asterisk Migration Plan ---")
+        report_content.extend(etc_report_lines)
+        report_content.append("") # Add a blank line for separation
+
+    # --- Compare MySQL Databases ---
+    db_report_lines = []
+    old_db_path = OLD_SYSTEM_DATA_DIR / "asterisk_dump.sql"
+    new_db_path = NEW_SYSTEM_DATA_DIR / "asterisk_dump.sql"
+
+    old_db = _parse_sql_dump(old_db_path)
+    new_db = _parse_sql_dump(new_db_path)
+
+    missing_keys_db, changed_keys_db = _compare_sql_dumps(old_db, new_db)
+
+    db_diff_found = False
+    if missing_keys_db:
+        db_diff_found = True
+        db_report_lines.append(f"Database entries to be ADDED from OLD to NEW ({len(missing_keys_db)} entries):")
+        if len(missing_keys_db) <= 5: # List if few, otherwise just count
+            for key in missing_keys_db:
+                db_report_lines.append(f"    - {key} : {old_db[key]}")
+        else:
+            db_report_lines.append("    (Too many to list, showing count only)")
+    
+    if changed_keys_db:
+        db_diff_found = True
+        db_report_lines.append(f"Database entries to be UPDATED from OLD to NEW ({len(changed_keys_db)} entries):")
+        if len(changed_keys_db) <= 5: # List if few, otherwise just count
+            for key, (old_val, new_val) in sorted(changed_keys_db.items()):
+                db_report_lines.append(f"    - {key}\n      Old: {old_val}\n      New: {new_val}")
+        else:
+            db_report_lines.append("    (Too many to list, showing count only)")
+    
+    if db_diff_found:
+        report_content.append("--- MySQL Database Migration Plan ---")
+        report_content.extend(db_report_lines)
+        report_content.append("") # Add a blank line for separation
+
+    if not etc_diff_found and not db_diff_found:
+        report_content.append("No significant differences found in /etc/asterisk or MySQL databases.")
+
+    return "\n".join(report_content)
+
+
 def main():
     parser = argparse.ArgumentParser(description="PBX Migration Agent")
-    parser.add_argument("action", choices=["fetch-all", "compare"], help="Action to perform")
+    parser.add_argument("action", choices=["fetch-all", "compare", "migrate"], help="Action to perform")
     args = parser.parse_args()
 
     if args.action == "fetch-all":
         print("--- Starting data fetch from OLD system ---")
-        fetch_etc_asterisk(OLD_SYSTEM_HOST, OLD_SYSTEM_DATA_DIR, is_old_server=True)
+        fetch_directory(OLD_SYSTEM_HOST, "/etc/asterisk", OLD_SYSTEM_DATA_DIR, is_old_server=True)
+        fetch_directory(OLD_SYSTEM_HOST, SOUND_FILES_PATH, OLD_SYSTEM_DATA_DIR, is_old_server=True)
+        fetch_directory(OLD_SYSTEM_HOST, VOICEMAIL_PATH, OLD_SYSTEM_DATA_DIR, is_old_server=True)
         fetch_mysql_dump(OLD_SYSTEM_HOST, OLD_SYSTEM_DATA_DIR, is_old_server=True)
         
         print("\n--- Starting data fetch from NEW system ---")
-        fetch_etc_asterisk(NEW_SYSTEM_HOST, NEW_SYSTEM_DATA_DIR)
+        fetch_directory(NEW_SYSTEM_HOST, "/etc/asterisk", NEW_SYSTEM_DATA_DIR, exclude_pattern="keys")
+        fetch_directory(NEW_SYSTEM_HOST, SOUND_FILES_PATH, NEW_SYSTEM_DATA_DIR)
+        fetch_directory(NEW_SYSTEM_HOST, VOICEMAIL_PATH, NEW_SYSTEM_DATA_DIR)
         fetch_mysql_dump(NEW_SYSTEM_HOST, NEW_SYSTEM_DATA_DIR)
         
         print("\nData fetch complete.")
 
     elif args.action == "compare":
-        print("--- Comparing /etc/asterisk directories ---")
         old_etc_dir = OLD_SYSTEM_DATA_DIR / "asterisk"
         new_etc_dir = NEW_SYSTEM_DATA_DIR / "asterisk"
-        
-        missing_new, missing_old = _compare_dirs(old_etc_dir, new_etc_dir)
-
-        if missing_new:
-            print("Files present in old system but missing in new:")
-            for p in missing_new:
-                print(f"  {p}")
-        if missing_old:
-            print("Files present in new system but missing in old:")
-            for p in missing_old:
-                print(f"  {p}")
-        if not missing_new and not missing_old:
-            print("Configuration file sets are identical")
-
-        print("\n--- Comparing MySQL Databases ---")
         old_db_path = OLD_SYSTEM_DATA_DIR / "asterisk_dump.sql"
         new_db_path = NEW_SYSTEM_DATA_DIR / "asterisk_dump.sql"
 
-        old_db = _parse_sql_dump(old_db_path)
-        new_db = _parse_sql_dump(new_db_path)
+        report = generate_comparison_report(old_etc_dir, new_etc_dir, old_db_path, new_db_path)
+        
+        report_file_path = "comparison_report.txt"
+        with open(report_file_path, "w") as f:
+            f.write(report)
+        print(f"Comparison report generated and saved to {report_file_path}")
 
-        missing_keys, changed = _compare_sql_dumps(old_db, new_db)
+    elif args.action == "migrate":
+        print("--- Starting migration to NEW system ---")
+        
+        # Push /etc/asterisk
+        old_etc_local_path = OLD_SYSTEM_DATA_DIR / "asterisk"
+        push_directory(NEW_SYSTEM_HOST, old_etc_local_path, "/etc/asterisk")
 
-        if missing_keys:
-            print("\nDatabase entries missing in new system:")
-            for key in missing_keys:
-                print(f"  {key} : {old_db[key]}")
-        if changed:
-            print("\nDatabase entries with different values:")
-            for key, (old_val, new_val) in sorted(changed.items()):
-                print(f"  {key}\n    old: {old_val}\n    new: {new_val}")
-        if not missing_keys and not changed:
-            print("\nDatabase entries are identical")
+        # Push sound files
+        old_sounds_local_path = OLD_SYSTEM_DATA_DIR / Path(SOUND_FILES_PATH).name
+        push_directory(NEW_SYSTEM_HOST, old_sounds_local_path, SOUND_FILES_PATH)
+
+        # Push voicemails
+        old_voicemail_local_path = OLD_SYSTEM_DATA_DIR / Path(VOICEMAIL_PATH).name
+        push_directory(NEW_SYSTEM_HOST, old_voicemail_local_path, VOICEMAIL_PATH)
+
+        # Push MySQL dump
+        old_db_local_path = OLD_SYSTEM_DATA_DIR / "asterisk_dump.sql"
+        push_mysql_dump(NEW_SYSTEM_HOST, old_db_local_path)
+        
+        print("\nMigration complete.")
 
 if __name__ == "__main__":
     main()

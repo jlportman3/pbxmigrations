@@ -1,0 +1,16 @@
+--- /etc/asterisk Differences ---
+Files present in OLD /etc/asterisk but MISSING in NEW (63 files):
+    (Too many to list, showing count only)
+Files present in NEW /etc/asterisk but MISSING in OLD (116 files):
+    (Too many to list, showing count only)
+
+--- MySQL Database Differences ---
+Database entries present in OLD system but MISSING in NEW (30 entries):
+    (Too many to list, showing count only)
+Database entries with DIFFERENT values (2 entries):
+    - ) ENGINE
+      Old: InnoDB DEFAULT CHARSET=latin1;
+      New: InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+    - -- Dump completed on 2025-08-07 16
+      Old: 34:38
+      New: 35:39
