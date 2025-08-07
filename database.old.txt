@@ -1,0 +1,722 @@
+/AMPUSER//queues/qnostate                         : usestate                 
+/AMPUSER/100/answermode                           : disabled                 
+/AMPUSER/100/callmenum                            : 100                      
+/AMPUSER/100/cfringtimer                          : 0                        
+/AMPUSER/100/cidname                              : Alamo Broadband Main Line
+/AMPUSER/100/cidnum                               : 100                      
+/AMPUSER/100/concurrency_limit                    : 0                        
+/AMPUSER/100/device                               : 100                      
+/AMPUSER/100/noanswer                             :                          
+/AMPUSER/100/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/100/outroute                             : outbound-6-7-8-10        
+/AMPUSER/100/password                             :                          
+/AMPUSER/100/queues/qnostate                      : usestate                 
+/AMPUSER/100/recording                            :                          
+/AMPUSER/100/recording/in/external                : always                   
+/AMPUSER/100/recording/in/internal                : dontcare                 
+/AMPUSER/100/recording/ondemand                   : disabled                 
+/AMPUSER/100/recording/out/external               : always                   
+/AMPUSER/100/recording/out/internal               : dontcare                 
+/AMPUSER/100/recording/priority                   : 0                        
+/AMPUSER/100/ringtimer                            : 0                        
+/AMPUSER/100/voicemail                            : default                  
+/AMPUSER/101/answermode                           : disabled                 
+/AMPUSER/101/callmenum                            : 101                      
+/AMPUSER/101/cfringtimer                          : 0                        
+/AMPUSER/101/cidname                              : Sam Soft Phone           
+/AMPUSER/101/cidnum                               : 101                      
+/AMPUSER/101/concurrency_limit                    : 0                        
+/AMPUSER/101/device                               : 101                      
+/AMPUSER/101/noanswer                             :                          
+/AMPUSER/101/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/101/password                             :                          
+/AMPUSER/101/queues/qnostate                      : usestate                 
+/AMPUSER/101/recording                            :                          
+/AMPUSER/101/recording/in/external                : dontcare                 
+/AMPUSER/101/recording/in/internal                : dontcare                 
+/AMPUSER/101/recording/ondemand                   : disabled                 
+/AMPUSER/101/recording/out/external               : dontcare                 
+/AMPUSER/101/recording/out/internal               : dontcare                 
+/AMPUSER/101/recording/priority                   : 10                       
+/AMPUSER/101/ringtimer                            : 0                        
+/AMPUSER/101/voicemail                            : novm                     
+/AMPUSER/102/answermode                           : disabled                 
+/AMPUSER/102/callmenum                            : 102                      
+/AMPUSER/102/cfringtimer                          : 0                        
+/AMPUSER/102/cidname                              : Home Phone               
+/AMPUSER/102/cidnum                               : 102                      
+/AMPUSER/102/concurrency_limit                    : 0                        
+/AMPUSER/102/device                               : 102                      
+/AMPUSER/102/noanswer                             :                          
+/AMPUSER/102/outboundcid                          : "Portman, J" <2106219425>
+/AMPUSER/102/outroute                             : outbound-4-6-7-8-10      
+/AMPUSER/102/password                             :                          
+/AMPUSER/102/queues/qnostate                      : usestate                 
+/AMPUSER/102/recording                            :                          
+/AMPUSER/102/recording/in/external                : dontcare                 
+/AMPUSER/102/recording/in/internal                : dontcare                 
+/AMPUSER/102/recording/ondemand                   : disabled                 
+/AMPUSER/102/recording/out/external               : dontcare                 
+/AMPUSER/102/recording/out/internal               : dontcare                 
+/AMPUSER/102/recording/priority                   : 0                        
+/AMPUSER/102/ringtimer                            : 30                       
+/AMPUSER/102/voicemail                            : default                  
+/AMPUSER/103/answermode                           : disabled                 
+/AMPUSER/103/cfringtimer                          : 0                        
+/AMPUSER/103/cidname                              : Home Fax                 
+/AMPUSER/103/cidnum                               : 103                      
+/AMPUSER/103/concurrency_limit                    : 0                        
+/AMPUSER/103/device                               : 103                      
+/AMPUSER/103/noanswer                             :                          
+/AMPUSER/103/outboundcid                          : "Alamo Broadband" <2108585111>
+/AMPUSER/103/outroute                             : outbound-6-7-8-10        
+/AMPUSER/103/password                             :                          
+/AMPUSER/103/queues/qnostate                      : usestate                 
+/AMPUSER/103/recording                            :                          
+/AMPUSER/103/recording/in/external                : dontcare                 
+/AMPUSER/103/recording/in/internal                : dontcare                 
+/AMPUSER/103/recording/ondemand                   : disabled                 
+/AMPUSER/103/recording/out/external               : dontcare                 
+/AMPUSER/103/recording/out/internal               : dontcare                 
+/AMPUSER/103/recording/priority                   : 0                        
+/AMPUSER/103/ringtimer                            : 0                        
+/AMPUSER/103/voicemail                            : novm                     
+/AMPUSER/104/answermode                           : disabled                 
+/AMPUSER/104/cfringtimer                          : 0                        
+/AMPUSER/104/cidname                              : Office Laptop            
+/AMPUSER/104/cidnum                               : 104                      
+/AMPUSER/104/concurrency_limit                    : 0                        
+/AMPUSER/104/device                               : 104                      
+/AMPUSER/104/noanswer                             :                          
+/AMPUSER/104/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/104/outroute                             : outbound-6-7-8-10        
+/AMPUSER/104/password                             :                          
+/AMPUSER/104/queues/qnostate                      : usestate                 
+/AMPUSER/104/recording                            :                          
+/AMPUSER/104/recording/in/external                : dontcare                 
+/AMPUSER/104/recording/in/internal                : dontcare                 
+/AMPUSER/104/recording/ondemand                   : disabled                 
+/AMPUSER/104/recording/out/external               : dontcare                 
+/AMPUSER/104/recording/out/internal               : dontcare                 
+/AMPUSER/104/recording/priority                   : 0                        
+/AMPUSER/104/ringtimer                            : 0                        
+/AMPUSER/104/voicemail                            : novm                     
+/AMPUSER/105/answermode                           : disabled                 
+/AMPUSER/105/cfringtimer                          : 0                        
+/AMPUSER/105/cidname                              : Sonya Office             
+/AMPUSER/105/cidnum                               : 105                      
+/AMPUSER/105/concurrency_limit                    : 0                        
+/AMPUSER/105/device                               : 105                      
+/AMPUSER/105/noanswer                             :                          
+/AMPUSER/105/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/105/outroute                             : outbound-6-7-8-10        
+/AMPUSER/105/password                             :                          
+/AMPUSER/105/queues/qnostate                      : usestate                 
+/AMPUSER/105/recording                            :                          
+/AMPUSER/105/recording/in/external                : dontcare                 
+/AMPUSER/105/recording/in/internal                : dontcare                 
+/AMPUSER/105/recording/ondemand                   : disabled                 
+/AMPUSER/105/recording/out/external               : dontcare                 
+/AMPUSER/105/recording/out/internal               : dontcare                 
+/AMPUSER/105/recording/priority                   : 0                        
+/AMPUSER/105/ringtimer                            : 0                        
+/AMPUSER/105/voicemail                            : novm                     
+/AMPUSER/107/answermode                           : disabled                 
+/AMPUSER/107/cfringtimer                          : 0                        
+/AMPUSER/107/cidname                              : Michael Rodriguez        
+/AMPUSER/107/cidnum                               : 107                      
+/AMPUSER/107/concurrency_limit                    : 0                        
+/AMPUSER/107/device                               : 107                      
+/AMPUSER/107/noanswer                             :                          
+/AMPUSER/107/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/107/outroute                             : outbound-4-6-7-8-10      
+/AMPUSER/107/password                             :                          
+/AMPUSER/107/queues/qnostate                      : usestate                 
+/AMPUSER/107/recording                            :                          
+/AMPUSER/107/recording/in/external                : always                   
+/AMPUSER/107/recording/in/internal                : dontcare                 
+/AMPUSER/107/recording/ondemand                   : disabled                 
+/AMPUSER/107/recording/out/external               : always                   
+/AMPUSER/107/recording/out/internal               : dontcare                 
+/AMPUSER/107/recording/priority                   : 0                        
+/AMPUSER/107/ringtimer                            : 0                        
+/AMPUSER/107/voicemail                            : novm                     
+/AMPUSER/108/answermode                           : disabled                 
+/AMPUSER/108/ccss/cc_agent_policy                 : generic                  
+/AMPUSER/108/ccss/cc_offer_timer                  : 30                       
+/AMPUSER/108/cfringtimer                          : 0                        
+/AMPUSER/108/cidname                              : Fax Line1                
+/AMPUSER/108/cidnum                               : 108                      
+/AMPUSER/108/concurrency_limit                    : 0                        
+/AMPUSER/108/device                               :                          
+/AMPUSER/108/language                             :                          
+/AMPUSER/108/noanswer                             :                          
+/AMPUSER/108/outboundcid                          :                          
+/AMPUSER/108/outroute                             : outbound-4-6-7-8-10      
+/AMPUSER/108/password                             :                          
+/AMPUSER/108/queues/qnostate                      : usestate                 
+/AMPUSER/108/recording                            :                          
+/AMPUSER/108/recording/in/external                : dontcare                 
+/AMPUSER/108/recording/in/internal                : dontcare                 
+/AMPUSER/108/recording/ondemand                   : disabled                 
+/AMPUSER/108/recording/out/external               : dontcare                 
+/AMPUSER/108/recording/out/internal               : dontcare                 
+/AMPUSER/108/recording/priority                   : 10                       
+/AMPUSER/108/ringtimer                            : 0                        
+/AMPUSER/108/voicemail                            : novm                     
+/AMPUSER/109/answermode                           : disabled                 
+/AMPUSER/109/cfringtimer                          : 0                        
+/AMPUSER/109/cidname                              : Alamo Broadband          
+/AMPUSER/109/cidnum                               : 109                      
+/AMPUSER/109/concurrency_limit                    : 0                        
+/AMPUSER/109/device                               : 109                      
+/AMPUSER/109/noanswer                             :                          
+/AMPUSER/109/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/109/outroute                             : outbound-6-7-8-10        
+/AMPUSER/109/password                             :                          
+/AMPUSER/109/queues/qnostate                      : usestate                 
+/AMPUSER/109/recording                            :                          
+/AMPUSER/109/recording/in/external                : dontcare                 
+/AMPUSER/109/recording/in/internal                : dontcare                 
+/AMPUSER/109/recording/ondemand                   : disabled                 
+/AMPUSER/109/recording/out/external               : dontcare                 
+/AMPUSER/109/recording/out/internal               : dontcare                 
+/AMPUSER/109/recording/priority                   : 10                       
+/AMPUSER/109/ringtimer                            : 0                        
+/AMPUSER/109/voicemail                            : novm                     
+/AMPUSER/110/answermode                           : disabled                 
+/AMPUSER/110/cfringtimer                          : 0                        
+/AMPUSER/110/cidname                              : Alamo Broadband Office 110
+/AMPUSER/110/cidnum                               : 110                      
+/AMPUSER/110/concurrency_limit                    : 0                        
+/AMPUSER/110/device                               : 110                      
+/AMPUSER/110/noanswer                             :                          
+/AMPUSER/110/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/110/password                             :                          
+/AMPUSER/110/queues/qnostate                      : usestate                 
+/AMPUSER/110/recording                            :                          
+/AMPUSER/110/recording/in/external                : dontcare                 
+/AMPUSER/110/recording/in/internal                : dontcare                 
+/AMPUSER/110/recording/ondemand                   : disabled                 
+/AMPUSER/110/recording/out/external               : dontcare                 
+/AMPUSER/110/recording/out/internal               : dontcare                 
+/AMPUSER/110/recording/priority                   : 10                       
+/AMPUSER/110/ringtimer                            : 0                        
+/AMPUSER/110/voicemail                            : novm                     
+/AMPUSER/111/answermode                           : disabled                 
+/AMPUSER/111/cfringtimer                          : 0                        
+/AMPUSER/111/cidname                              : Job Line                 
+/AMPUSER/111/cidnum                               : 111                      
+/AMPUSER/111/concurrency_limit                    : 0                        
+/AMPUSER/111/device                               :                          
+/AMPUSER/111/noanswer                             :                          
+/AMPUSER/111/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/111/outroute                             : outbound-6-7-8-10        
+/AMPUSER/111/password                             :                          
+/AMPUSER/111/queues/qnostate                      : usestate                 
+/AMPUSER/111/recording                            :                          
+/AMPUSER/111/recording/in/external                : always                   
+/AMPUSER/111/recording/in/internal                : dontcare                 
+/AMPUSER/111/recording/ondemand                   : disabled                 
+/AMPUSER/111/recording/out/external               : dontcare                 
+/AMPUSER/111/recording/out/internal               : dontcare                 
+/AMPUSER/111/recording/priority                   : 10                       
+/AMPUSER/111/ringtimer                            : 0                        
+/AMPUSER/111/voicemail                            : default                  
+/AMPUSER/200/answermode                           : disabled                 
+/AMPUSER/200/cfringtimer                          : 0                        
+/AMPUSER/200/cidname                              : Sam Office               
+/AMPUSER/200/cidnum                               : 200                      
+/AMPUSER/200/concurrency_limit                    : 0                        
+/AMPUSER/200/device                               : 200                      
+/AMPUSER/200/noanswer                             :                          
+/AMPUSER/200/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/200/password                             :                          
+/AMPUSER/200/queues/qnostate                      : usestate                 
+/AMPUSER/200/recording                            :                          
+/AMPUSER/200/recording/in/external                : never                    
+/AMPUSER/200/recording/in/internal                : never                    
+/AMPUSER/200/recording/ondemand                   : disabled                 
+/AMPUSER/200/recording/out/external               : never                    
+/AMPUSER/200/recording/out/internal               : never                    
+/AMPUSER/200/recording/priority                   : 10                       
+/AMPUSER/200/ringtimer                            : 0                        
+/AMPUSER/200/voicemail                            : novm                     
+/AMPUSER/201/answermode                           : disabled                 
+/AMPUSER/201/cfringtimer                          : 0                        
+/AMPUSER/201/cidname                              : Southton Tower Xlite     
+/AMPUSER/201/cidnum                               : 201                      
+/AMPUSER/201/concurrency_limit                    : 0                        
+/AMPUSER/201/device                               : 201                      
+/AMPUSER/201/noanswer                             :                          
+/AMPUSER/201/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/201/password                             :                          
+/AMPUSER/201/queues/qnostate                      : usestate                 
+/AMPUSER/201/recording                            :                          
+/AMPUSER/201/recording/in/external                : dontcare                 
+/AMPUSER/201/recording/in/internal                : dontcare                 
+/AMPUSER/201/recording/ondemand                   : disabled                 
+/AMPUSER/201/recording/out/external               : dontcare                 
+/AMPUSER/201/recording/out/internal               : dontcare                 
+/AMPUSER/201/recording/priority                   : 10                       
+/AMPUSER/201/ringtimer                            : 0                        
+/AMPUSER/201/voicemail                            : novm                     
+/AMPUSER/202/answermode                           : disabled                 
+/AMPUSER/202/cfringtimer                          : 0                        
+/AMPUSER/202/cidname                              : Michael Rodriguez Mac    
+/AMPUSER/202/cidnum                               : 202                      
+/AMPUSER/202/concurrency_limit                    : 0                        
+/AMPUSER/202/device                               : 202                      
+/AMPUSER/202/noanswer                             :                          
+/AMPUSER/202/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/202/password                             :                          
+/AMPUSER/202/queues/qnostate                      : usestate                 
+/AMPUSER/202/recording                            :                          
+/AMPUSER/202/recording/in/external                : dontcare                 
+/AMPUSER/202/recording/in/internal                : dontcare                 
+/AMPUSER/202/recording/ondemand                   : disabled                 
+/AMPUSER/202/recording/out/external               : dontcare                 
+/AMPUSER/202/recording/out/internal               : dontcare                 
+/AMPUSER/202/recording/priority                   : 10                       
+/AMPUSER/202/ringtimer                            : 0                        
+/AMPUSER/202/voicemail                            : novm                     
+/AMPUSER/203/answermode                           : disabled                 
+/AMPUSER/203/cfringtimer                          : 0                        
+/AMPUSER/203/cidname                              : Joe Portman (game room)  
+/AMPUSER/203/cidnum                               : 203                      
+/AMPUSER/203/concurrency_limit                    : 0                        
+/AMPUSER/203/device                               : 203                      
+/AMPUSER/203/noanswer                             :                          
+/AMPUSER/203/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/203/password                             :                          
+/AMPUSER/203/queues/qnostate                      : usestate                 
+/AMPUSER/203/recording                            :                          
+/AMPUSER/203/recording/in/external                : dontcare                 
+/AMPUSER/203/recording/in/internal                : dontcare                 
+/AMPUSER/203/recording/ondemand                   : disabled                 
+/AMPUSER/203/recording/out/external               : dontcare                 
+/AMPUSER/203/recording/out/internal               : dontcare                 
+/AMPUSER/203/recording/priority                   : 10                       
+/AMPUSER/203/ringtimer                            : 0                        
+/AMPUSER/203/voicemail                            : novm                     
+/AMPUSER/204/answermode                           : disabled                 
+/AMPUSER/204/cfringtimer                          : 0                        
+/AMPUSER/204/cidname                              : Sam Portman Laptop       
+/AMPUSER/204/cidnum                               : 204                      
+/AMPUSER/204/concurrency_limit                    : 0                        
+/AMPUSER/204/device                               : 204                      
+/AMPUSER/204/noanswer                             :                          
+/AMPUSER/204/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/204/password                             :                          
+/AMPUSER/204/queues/qnostate                      : usestate                 
+/AMPUSER/204/recording                            :                          
+/AMPUSER/204/recording/in/external                : dontcare                 
+/AMPUSER/204/recording/in/internal                : dontcare                 
+/AMPUSER/204/recording/ondemand                   : disabled                 
+/AMPUSER/204/recording/out/external               : dontcare                 
+/AMPUSER/204/recording/out/internal               : dontcare                 
+/AMPUSER/204/recording/priority                   : 10                       
+/AMPUSER/204/ringtimer                            : 0                        
+/AMPUSER/204/voicemail                            : novm                     
+/AMPUSER/205/answermode                           : disabled                 
+/AMPUSER/205/cfringtimer                          : 0                        
+/AMPUSER/205/cidname                              : Sonya Sandy Oaks         
+/AMPUSER/205/cidnum                               : 205                      
+/AMPUSER/205/concurrency_limit                    : 0                        
+/AMPUSER/205/device                               : 205                      
+/AMPUSER/205/noanswer                             :                          
+/AMPUSER/205/outboundcid                          : <2105877201>             
+/AMPUSER/205/password                             :                          
+/AMPUSER/205/queues/qnostate                      : usestate                 
+/AMPUSER/205/recording                            :                          
+/AMPUSER/205/recording/in/external                : always                   
+/AMPUSER/205/recording/in/internal                : dontcare                 
+/AMPUSER/205/recording/ondemand                   : disabled                 
+/AMPUSER/205/recording/out/external               : always                   
+/AMPUSER/205/recording/out/internal               : dontcare                 
+/AMPUSER/205/recording/priority                   : 10                       
+/AMPUSER/205/ringtimer                            : 0                        
+/AMPUSER/205/voicemail                            : novm                     
+/AMPUSER/206/answermode                           : disabled                 
+/AMPUSER/206/ccss/cc_agent_policy                 : generic                  
+/AMPUSER/206/ccss/cc_offer_timer                  : 30                       
+/AMPUSER/206/cfringtimer                          : 0                        
+/AMPUSER/206/cidname                              : Joe Sandy Oaks           
+/AMPUSER/206/cidnum                               : 206                      
+/AMPUSER/206/concurrency_limit                    : 0                        
+/AMPUSER/206/device                               : 206                      
+/AMPUSER/206/language                             :                          
+/AMPUSER/206/noanswer                             :                          
+/AMPUSER/206/outboundcid                          : "Alamo Broadband" <210-892-4499>
+/AMPUSER/206/password                             :                          
+/AMPUSER/206/queues/qnostate                      : usestate                 
+/AMPUSER/206/recording                            :                          
+/AMPUSER/206/recording/in/external                : dontcare                 
+/AMPUSER/206/recording/in/internal                : dontcare                 
+/AMPUSER/206/recording/ondemand                   : disabled                 
+/AMPUSER/206/recording/out/external               : dontcare                 
+/AMPUSER/206/recording/out/internal               : dontcare                 
+/AMPUSER/206/recording/priority                   : 10                       
+/AMPUSER/206/ringtimer                            : 0                        
+/AMPUSER/206/voicemail                            : novm                     
+/AMPUSER/207/answermode                           : disabled                 
+/AMPUSER/207/cfringtimer                          : 0                        
+/AMPUSER/207/cidname                              : Victoria Sandy Oaks      
+/AMPUSER/207/cidnum                               : 207                      
+/AMPUSER/207/concurrency_limit                    : 0                        
+/AMPUSER/207/device                               : 207                      
+/AMPUSER/207/noanswer                             :                          
+/AMPUSER/207/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/207/password                             :                          
+/AMPUSER/207/queues/qnostate                      : usestate                 
+/AMPUSER/207/recording                            :                          
+/AMPUSER/207/recording/in/external                : dontcare                 
+/AMPUSER/207/recording/in/internal                : dontcare                 
+/AMPUSER/207/recording/ondemand                   : disabled                 
+/AMPUSER/207/recording/out/external               : dontcare                 
+/AMPUSER/207/recording/out/internal               : dontcare                 
+/AMPUSER/207/recording/priority                   : 10                       
+/AMPUSER/207/ringtimer                            : 0                        
+/AMPUSER/207/voicemail                            : novm                     
+/AMPUSER/208/answermode                           : disabled                 
+/AMPUSER/208/cfringtimer                          : 0                        
+/AMPUSER/208/cidname                              : Victoria BRIA 208        
+/AMPUSER/208/cidnum                               : 208                      
+/AMPUSER/208/concurrency_limit                    : 0                        
+/AMPUSER/208/device                               : 208                      
+/AMPUSER/208/noanswer                             :                          
+/AMPUSER/208/outboundcid                          : <2105877201>             
+/AMPUSER/208/password                             :                          
+/AMPUSER/208/queues/qnostate                      : usestate                 
+/AMPUSER/208/recording                            :                          
+/AMPUSER/208/recording/in/external                : dontcare                 
+/AMPUSER/208/recording/in/internal                : dontcare                 
+/AMPUSER/208/recording/ondemand                   : disabled                 
+/AMPUSER/208/recording/out/external               : dontcare                 
+/AMPUSER/208/recording/out/internal               : dontcare                 
+/AMPUSER/208/recording/priority                   : 10                       
+/AMPUSER/208/ringtimer                            : 0                        
+/AMPUSER/208/voicemail                            : novm                     
+/AMPUSER/222/answermode                           : disabled                 
+/AMPUSER/222/cfringtimer                          : 0                        
+/AMPUSER/222/cidname                              : Joe Portman              
+/AMPUSER/222/cidnum                               : 222                      
+/AMPUSER/222/concurrency_limit                    : 0                        
+/AMPUSER/222/device                               : 222                      
+/AMPUSER/222/noanswer                             :                          
+/AMPUSER/222/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/222/password                             :                          
+/AMPUSER/222/queues/qnostate                      : usestate                 
+/AMPUSER/222/recording                            :                          
+/AMPUSER/222/recording/in/external                : dontcare                 
+/AMPUSER/222/recording/in/internal                : dontcare                 
+/AMPUSER/222/recording/ondemand                   : disabled                 
+/AMPUSER/222/recording/out/external               : dontcare                 
+/AMPUSER/222/recording/out/internal               : dontcare                 
+/AMPUSER/222/recording/priority                   : 10                       
+/AMPUSER/222/ringtimer                            : 0                        
+/AMPUSER/222/voicemail                            : novm                     
+/AMPUSER/303/answermode                           : disabled                 
+/AMPUSER/303/cfringtimer                          : 0                        
+/AMPUSER/303/cidname                              : Joe Portman Gaming       
+/AMPUSER/303/cidnum                               : 303                      
+/AMPUSER/303/concurrency_limit                    : 0                        
+/AMPUSER/303/device                               : 303                      
+/AMPUSER/303/noanswer                             :                          
+/AMPUSER/303/outboundcid                          : "Alamo Broadband" <2105877201>
+/AMPUSER/303/password                             :                          
+/AMPUSER/303/queues/qnostate                      : usestate                 
+/AMPUSER/303/recording                            :                          
+/AMPUSER/303/recording/in/external                : always                   
+/AMPUSER/303/recording/in/internal                : dontcare                 
+/AMPUSER/303/recording/ondemand                   : disabled                 
+/AMPUSER/303/recording/out/external               : always                   
+/AMPUSER/303/recording/out/internal               : dontcare                 
+/AMPUSER/303/recording/priority                   : 10                       
+/AMPUSER/303/ringtimer                            : 0                        
+/AMPUSER/303/voicemail                            : novm                     
+/AMPUSER/333/answermode                           : disabled                 
+/AMPUSER/333/cfringtimer                          : 0                        
+/AMPUSER/333/cidname                              : Fiber VM                 
+/AMPUSER/333/cidnum                               : 333                      
+/AMPUSER/333/concurrency_limit                    : 0                        
+/AMPUSER/333/device                               :                          
+/AMPUSER/333/noanswer                             :                          
+/AMPUSER/333/outboundcid                          : 8882390202               
+/AMPUSER/333/password                             :                          
+/AMPUSER/333/queues/qnostate                      : usestate                 
+/AMPUSER/333/recording                            :                          
+/AMPUSER/333/recording/in/external                : dontcare                 
+/AMPUSER/333/recording/in/internal                : dontcare                 
+/AMPUSER/333/recording/ondemand                   : disabled                 
+/AMPUSER/333/recording/out/external               : dontcare                 
+/AMPUSER/333/recording/out/internal               : dontcare                 
+/AMPUSER/333/recording/priority                   : 10                       
+/AMPUSER/333/ringtimer                            : 0                        
+/AMPUSER/333/voicemail                            : default                  
+/AMPUSER/999/cidname                              : Forward To ServerPlus    
+/AMPUSER/999/cidnum                               : 999                      
+/AMPUSER/999/device                               : 999                      
+/AMPUSER/999/noanswer                             :                          
+/AMPUSER/999/outboundcid                          :                          
+/AMPUSER/999/outroute                             : outbound-6-7-8-10        
+/AMPUSER/999/password                             :                          
+/AMPUSER/999/recording                            : out=Adhoc|in=Adhoc       
+/AMPUSER/999/ringtimer                            : 0                        
+/AMPUSER/999/voicemail                            : novm                     
+/AMPUSER/admin/callmenum                          : *11100103164871378381    
+/BLKVM/602/Local/602@from-internal-07f4;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-0a2a;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-0c02;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-100e;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-1701;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-1bb8;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-1bef;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-1c9b;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-1d1d;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-1e1b;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-20a2;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-229c;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-2435;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-25af;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-2882;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-2ca5;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-39d5;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-3a87;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-3cbb;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-40a6;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-4341;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-4a08;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-5003;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-56e2;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-56f4;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-5779;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-58e2;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-5f26;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-5fc5;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-6035;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-60fc;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-628d;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-6a8c;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-6c33;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-70e5;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-74ca;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-76ed;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-7835;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-7cf9;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-7d05;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-829d;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-836e;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-839d;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-8bf1;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-904e;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-9450;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-9a2a;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-9dfd;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-9f33;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-9f67;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-a1a8;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-a63c;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-a7bb;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-b103;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-b12f;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-b4d9;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-c23f;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-c292;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-c8a6;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-d380;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-d94d;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-dacb;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-ddb7;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-e0e4;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-e19f;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-e26b;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-e42a;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-ec63;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-ee37;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-f07b;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-f4a3;2         : TRUE                     
+/BLKVM/602/Local/602@from-internal-fd54;2         : TRUE                     
+/CALLTRACE/#2103109711                            : 12103162300              
+/CALLTRACE/100                                    : 12103162300              
+/CALLTRACE/101                                    : 12108922291              
+/CALLTRACE/102                                    : 12108922291              
+/CALLTRACE/103                                    : 12105787060              
+/CALLTRACE/104                                    : 12108922291              
+/CALLTRACE/105                                    : 13197343308              
+/CALLTRACE/106                                    : 12105847547              
+/CALLTRACE/107                                    : 12108922291              
+/CALLTRACE/109                                    : 12102096223              
+/CALLTRACE/110                                    : 12108656234              
+/CALLTRACE/199                                    : 101                      
+/CALLTRACE/200                                    : 12104200242              
+/CALLTRACE/201                                    : 12103955500              
+/CALLTRACE/202                                    : 222                      
+/CALLTRACE/203                                    : 12104200242              
+/CALLTRACE/204                                    : 12108922291              
+/CALLTRACE/205                                    : 12106431252              
+/CALLTRACE/206                                    : 12104200242              
+/CALLTRACE/207                                    : 12104200242              
+/CALLTRACE/208                                    : 12104200242              
+/CALLTRACE/2105877201                             : 12108922291              
+/CALLTRACE/2106219425                             : 12108922291              
+/CALLTRACE/222                                    : 14099231646              
+/CALLTRACE/301                                    : 12105877201              
+/CALLTRACE/999                                    : 12107861572              
+/CW/101                                           : ENABLED                  
+/CW/102                                           : ENABLED                  
+/CW/103                                           : ENABLED                  
+/CW/104                                           : ENABLED                  
+/CW/105                                           : ENABLED                  
+/CW/107                                           : ENABLED                  
+/CW/108                                           : ENABLED                  
+/CW/109                                           : ENABLED                  
+/CW/110                                           : ENABLED                  
+/CW/111                                           : ENABLED                  
+/CW/200                                           : ENABLED                  
+/CW/201                                           : ENABLED                  
+/CW/202                                           : ENABLED                  
+/CW/203                                           : ENABLED                  
+/CW/204                                           : ENABLED                  
+/CW/205                                           : ENABLED                  
+/CW/206                                           : ENABLED                  
+/CW/207                                           : ENABLED                  
+/CW/208                                           : ENABLED                  
+/CW/222                                           : ENABLED                  
+/CW/303                                           : ENABLED                  
+/CW/333                                           : ENABLED                  
+/CW/999                                           : ENABLED                  
+/CustomDevstate/QUEUE203*1                        : NOT_INUSE                
+/CustomDevstate/QUEUE203*3                        : NOT_INUSE                
+/CustomDevstate/QUEUE206*1                        : INUSE                    
+/CustomDevstate/QUEUE206*3                        : INUSE                    
+/CustomDevstate/QUEUE206*777                      : INUSE                    
+/CustomDevstate/TC1                               : NOT_INUSE                
+/CustomDevstate/TC3                               : NOT_INUSE                
+/CustomDevstate/TC4                               : INUSE                    
+/CustomDevstate/TCSTICKY3                         : NOT_INUSE                
+/CustomDevstate/TCSTICKY4                         : NOT_INUSE                
+/DAYNIGHT/C0                                      : NIGHT                    
+/DEVICE/100/default_user                          : 100                      
+/DEVICE/100/dial                                  : SIP/100                  
+/DEVICE/100/type                                  : fixed                    
+/DEVICE/100/user                                  : 100                      
+/DEVICE/101/default_user                          : 101                      
+/DEVICE/101/dial                                  : SIP/101                  
+/DEVICE/101/type                                  : fixed                    
+/DEVICE/101/user                                  : 101                      
+/DEVICE/102/default_user                          : 102                      
+/DEVICE/102/dial                                  : SIP/102                  
+/DEVICE/102/type                                  : fixed                    
+/DEVICE/102/user                                  : 102                      
+/DEVICE/103/default_user                          : 103                      
+/DEVICE/103/dial                                  : SIP/103                  
+/DEVICE/103/type                                  : fixed                    
+/DEVICE/103/user                                  : 103                      
+/DEVICE/104/default_user                          : 104                      
+/DEVICE/104/dial                                  : SIP/104                  
+/DEVICE/104/type                                  : fixed                    
+/DEVICE/104/user                                  : 104                      
+/DEVICE/105/default_user                          : 105                      
+/DEVICE/105/dial                                  : SIP/105                  
+/DEVICE/105/type                                  : fixed                    
+/DEVICE/105/user                                  : 105                      
+/DEVICE/107/default_user                          : 107                      
+/DEVICE/107/dial                                  : SIP/107                  
+/DEVICE/107/type                                  : fixed                    
+/DEVICE/107/user                                  : 107                      
+/DEVICE/109/default_user                          : 109                      
+/DEVICE/109/dial                                  : SIP/109                  
+/DEVICE/109/type                                  : fixed                    
+/DEVICE/109/user                                  : 109                      
+/DEVICE/110/default_user                          : 110                      
+/DEVICE/110/dial                                  : SIP/110                  
+/DEVICE/110/type                                  : fixed                    
+/DEVICE/110/user                                  : 110                      
+/DEVICE/200/default_user                          : 200                      
+/DEVICE/200/dial                                  : SIP/200                  
+/DEVICE/200/type                                  : fixed                    
+/DEVICE/200/user                                  : 200                      
+/DEVICE/201/default_user                          : 201                      
+/DEVICE/201/dial                                  : SIP/201                  
+/DEVICE/201/type                                  : fixed                    
+/DEVICE/201/user                                  : 201                      
+/DEVICE/202/default_user                          : 202                      
+/DEVICE/202/dial                                  : SIP/202                  
+/DEVICE/202/type                                  : fixed                    
+/DEVICE/202/user                                  : 202                      
+/DEVICE/203/default_user                          : 203                      
+/DEVICE/203/dial                                  : SIP/203                  
+/DEVICE/203/type                                  : fixed                    
+/DEVICE/203/user                                  : 203                      
+/DEVICE/204/default_user                          : 204                      
+/DEVICE/204/dial                                  : SIP/204                  
+/DEVICE/204/type                                  : fixed                    
+/DEVICE/204/user                                  : 204                      
+/DEVICE/205/default_user                          : 205                      
+/DEVICE/205/dial                                  : SIP/205                  
+/DEVICE/205/type                                  : fixed                    
+/DEVICE/205/user                                  : 205                      
+/DEVICE/206/default_user                          : 206                      
+/DEVICE/206/dial                                  : SIP/206                  
+/DEVICE/206/type                                  : fixed                    
+/DEVICE/206/user                                  : 206                      
+/DEVICE/207/default_user                          : 207                      
+/DEVICE/207/dial                                  : SIP/207                  
+/DEVICE/207/type                                  : fixed                    
+/DEVICE/207/user                                  : 207                      
+/DEVICE/208/default_user                          : 208                      
+/DEVICE/208/dial                                  : SIP/208                  
+/DEVICE/208/type                                  : fixed                    
+/DEVICE/208/user                                  : 208                      
+/DEVICE/222/default_user                          : 222                      
+/DEVICE/222/dial                                  : SIP/222                  
+/DEVICE/222/type                                  : fixed                    
+/DEVICE/222/user                                  : 222                      
+/DEVICE/303/default_user                          : 303                      
+/DEVICE/303/dial                                  : SIP/303                  
+/DEVICE/303/type                                  : fixed                    
+/DEVICE/303/user                                  : 303                      
+/DEVICE/999/default_user                          : 999                      
+/DEVICE/999/dial                                  : sip/alamobb@asterisk.serverplus.com
+/DEVICE/999/type                                  : fixed                    
+/DEVICE/999/user                                  : 999                      
+/QPENALTY/1/dynmemberonly                         : no                       
+/QPENALTY/4/dynmemberonly                         : no                       
+/QPENALTY/777/dynmemberonly                       : no                       
+/Queue/PersistentMembers/1                        : Local/107@from-queue/n;0;0;Michael Rodriguez;hint:107@ext-local|Local/208@from-queue/n;0;0;Victoria BRIA 208;hint:208@ext-local|Local/206@from-queue/n;0;0;Joe Sandy Oaks;hint:206@ext-local|Local/204@from-queue/n;0;0;Sam Portman Laptop;hint:204@ext-local
+/Queue/PersistentMembers/3                        : Local/206@from-queue/n;0;0;Joe Sandy Oaks;hint:206@ext-local
+/RINGGROUP/600/changecid                          : default                  
+/RINGGROUP/600/fixedcid                           :                          
+/RINGGROUP/601/changecid                          : default                  
+/RINGGROUP/601/fixedcid                           :                          
+/RINGGROUP/602/changecid                          : default                  
+/RINGGROUP/602/fixedcid                           :                          
+/RINGGROUP/603/changecid                          : default                  
+/RINGGROUP/603/fixedcid                           :                          
+/RINGGROUP/604/changecid                          : default                  
+/RINGGROUP/604/fixedcid                           :                          
+/RINGGROUP/605/changecid                          : default                  
+/RINGGROUP/605/fixedcid                           :                          
+/RINGGROUP/606/changecid                          : default                  
+/RINGGROUP/606/fixedcid                           :                          
+/RINGGROUP/607/changecid                          : default                  
+/RINGGROUP/607/fixedcid                           :                          
+/RINGGROUP/608/changecid                          : default                  
+/RINGGROUP/608/fixedcid                           :                          
+/RINGGROUP/609/changecid                          : default                  
+/RINGGROUP/609/fixedcid                           :                          
+/RINGGROUP/610/changecid                          : default                  
+/RINGGROUP/610/fixedcid                           :                          
+/RINGGROUP/611/changecid                          : default                  
+/RINGGROUP/611/fixedcid                           :                          
+/RINGGROUP/612/changecid                          : default                  
+/RINGGROUP/612/fixedcid                           :                          
+/SIP/Registry/200                                 : 38.103.216.7:5060:3600:200:sip:200@10.0.99.8:5060;ob
+/SIP/Registry/207                                 : 38.103.216.7:17379:3600:207:sip:207@10.0.99.11:5060
+/SIP/Registry/222                                 : 38.103.216.7:65501:3600:222:sip:222@38.103.216.7:65501;rinstance=c037655fa1dc0b7b
+/TC/3                                             :                          
+/TC/4                                             :                          
+/dundi/secret                                     : PY7Cf6NK6FC5Q6ERpW+BYg==;U413SwJfVS1wCHolw72uXg==
+/dundi/secretexpiry                               : 1754600027               
+721 results found.
