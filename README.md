@@ -22,3 +22,6 @@ python3 compare_configs.py \
 
 The script prints files or ASTDB keys present on the old system but
 missing on the new one, and highlights differing values.
+the old pbx is pbx.alamobb.net
+the new pbx is newpbx.alamobb.net
+ssh access can be arranged
